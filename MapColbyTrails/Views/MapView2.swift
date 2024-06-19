@@ -60,48 +60,48 @@
 //}
 
 
-import SwiftUI
-import MapKit
-
-struct MapView: View {
-    @ObservedObject var viewModel: MapViewModel
-    
-    @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194),
-        span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-    )
-    // Define the region centered on Colby College
-    private var colbyCollegeRegion: MKCoordinateRegion {
-        MKCoordinateRegion(
-            center: .colbyCollege,
-            span: MKCoordinateSpan(latitudeDelta: 0.015, longitudeDelta: 0.020) // Level of zoom
-        )
-    }
-
-    // Define the camera position centered on Colby College
-    private var colbyCollegeCamera: MapCameraPosition {
-        MapCameraPosition.region(colbyCollegeRegion)
-    }
-    
-    var body: some View {
-            Map(initialPosition: colbyCollegeCamera)
-                .mapControls {
-                    MapUserLocationButton()
-                    MapPitchToggle()
-                    MapCompass()
-                }
-            .edgesIgnoringSafeArea(.all)
-
-    }
-}
-
-#Preview {
-    MapView(viewModel: MapViewModel())
-}
-
-extension CLLocationCoordinate2D {
-    static let colbyCollege = CLLocationCoordinate2D(latitude: 44.5639, longitude: -69.6590)
-}
+//import SwiftUI
+//import MapKit
+//
+//struct MapView: View {
+//    @ObservedObject var viewModel: MapViewModel
+//    
+//    @State private var region = MKCoordinateRegion(
+//        center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194),
+//        span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+//    )
+//    // Define the region centered on Colby College
+//    private var colbyCollegeRegion: MKCoordinateRegion {
+//        MKCoordinateRegion(
+//            center: .colbyCollege,
+//            span: MKCoordinateSpan(latitudeDelta: 0.015, longitudeDelta: 0.020) // Level of zoom
+//        )
+//    }
+//
+//    // Define the camera position centered on Colby College
+//    private var colbyCollegeCamera: MapCameraPosition {
+//        MapCameraPosition.region(colbyCollegeRegion)
+//    }
+//    
+//    var body: some View {
+//            Map(initialPosition: colbyCollegeCamera)
+//                .mapControls {
+//                    MapUserLocationButton()
+//                    MapPitchToggle()
+//                    MapCompass()
+//                }
+//            .edgesIgnoringSafeArea(.all)
+//
+//    }
+//}
+//
+//#Preview {
+//    MapView(viewModel: MapViewModel())
+//}
+//
+//extension CLLocationCoordinate2D {
+//    static let colbyCollege = CLLocationCoordinate2D(latitude: 44.5639, longitude: -69.6590)
+//}
 
 
 

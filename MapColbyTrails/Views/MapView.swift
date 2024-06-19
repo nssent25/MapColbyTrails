@@ -25,12 +25,18 @@ struct MapView: View {
     }
 
     var body: some View {
-        Map(initialPosition: colbyCollegeCamera)
-            .mapControls {
-                MapUserLocationButton()
-                MapPitchToggle()
-                MapCompass()
+        Map(initialPosition: colbyCollegeCamera) {
+            // Loop through each trail and add a MapPolyline
+            ForEach(viewModel.trails) { trail in
+                MapPolyline(coordinates: trail.coordinates)
+                    .stroke(trail.color, lineWidth: 5)
             }
+        }
+        .mapControls {
+            MapUserLocationButton()
+            MapPitchToggle()
+            MapCompass()
+        }
     }
 }
 
