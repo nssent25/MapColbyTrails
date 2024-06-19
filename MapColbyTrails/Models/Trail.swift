@@ -15,3 +15,13 @@ struct Trail: Identifiable {
     var coordinates: [CLLocationCoordinate2D] // Array of coordinates for the trail
     var color: Color // Color of the trail
 }
+
+import Foundation
+
+struct TrailInfo: Identifiable, Codable {
+    let id = UUID()
+    let name: String
+    let description: String
+    let length: Double // Length in miles
+    let suitability: String // e.g., "Easy", "Moderate", "Hard"
+}

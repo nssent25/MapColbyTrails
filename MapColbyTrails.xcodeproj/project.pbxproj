@@ -17,6 +17,9 @@
 		CF175DBE2C2285A000FEE0E9 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF175DBD2C2285A000FEE0E9 /* MapViewModel.swift */; };
 		CF175DC02C22883800FEE0E9 /* MapView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF175DBF2C22883800FEE0E9 /* MapView2.swift */; };
 		CF175DCB2C23496900FEE0E9 /* map-2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = CF175DCA2C23496900FEE0E9 /* map-2.geojson */; };
+		CF175DCE2C2377B100FEE0E9 /* trails-2.json in Resources */ = {isa = PBXBuildFile; fileRef = CF175DCD2C2377B100FEE0E9 /* trails-2.json */; };
+		CF175DD02C237A4A00FEE0E9 /* TrailInfosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF175DCF2C237A4A00FEE0E9 /* TrailInfosView.swift */; };
+		CF175DD22C237B2200FEE0E9 /* TrailInfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF175DD12C237B2200FEE0E9 /* TrailInfoCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,10 @@
 		CF175DBF2C22883800FEE0E9 /* MapView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView2.swift; sourceTree = "<group>"; };
 		CF175DC92C23476800FEE0E9 /* trails.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = trails.geojson; sourceTree = "<group>"; };
 		CF175DCA2C23496900FEE0E9 /* map-2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "map-2.geojson"; sourceTree = "<group>"; };
+		CF175DCC2C234B6600FEE0E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CF175DCD2C2377B100FEE0E9 /* trails-2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "trails-2.json"; sourceTree = "<group>"; };
+		CF175DCF2C237A4A00FEE0E9 /* TrailInfosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailInfosView.swift; sourceTree = "<group>"; };
+		CF175DD12C237B2200FEE0E9 /* TrailInfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailInfoCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +71,7 @@
 		CF175DA82C2277F000FEE0E9 /* MapColbyTrails */ = {
 			isa = PBXGroup;
 			children = (
+				CF175DCC2C234B6600FEE0E9 /* Info.plist */,
 				CF175DA92C2277F000FEE0E9 /* MapColbyTrailsApp.swift */,
 				CF175DC62C23474D00FEE0E9 /* Models */,
 				CF175DC52C23473000FEE0E9 /* Views */,
@@ -89,6 +97,8 @@
 				CF175DAB2C2277F000FEE0E9 /* ContentView.swift */,
 				CF175DB72C22782B00FEE0E9 /* MapView.swift */,
 				CF175DBF2C22883800FEE0E9 /* MapView2.swift */,
+				CF175DCF2C237A4A00FEE0E9 /* TrailInfosView.swift */,
+				CF175DD12C237B2200FEE0E9 /* TrailInfoCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -115,6 +125,7 @@
 			children = (
 				CF175DCA2C23496900FEE0E9 /* map-2.geojson */,
 				CF175DC92C23476800FEE0E9 /* trails.geojson */,
+				CF175DCD2C2377B100FEE0E9 /* trails-2.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -179,6 +190,7 @@
 			files = (
 				CF175DB12C2277F200FEE0E9 /* Preview Assets.xcassets in Resources */,
 				CF175DCB2C23496900FEE0E9 /* map-2.geojson in Resources */,
+				CF175DCE2C2377B100FEE0E9 /* trails-2.json in Resources */,
 				CF175DAE2C2277F200FEE0E9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,7 +206,9 @@
 				CF175DAC2C2277F000FEE0E9 /* ContentView.swift in Sources */,
 				CF175DB82C22782B00FEE0E9 /* MapView.swift in Sources */,
 				CF175DBA2C2278C400FEE0E9 /* Trail.swift in Sources */,
+				CF175DD22C237B2200FEE0E9 /* TrailInfoCardView.swift in Sources */,
 				CF175DAA2C2277F000FEE0E9 /* MapColbyTrailsApp.swift in Sources */,
+				CF175DD02C237A4A00FEE0E9 /* TrailInfosView.swift in Sources */,
 				CF175DBC2C22857800FEE0E9 /* UserLocation.swift in Sources */,
 				CF175DBE2C2285A000FEE0E9 /* MapViewModel.swift in Sources */,
 			);
@@ -333,12 +347,16 @@
 				DEVELOPMENT_TEAM = 3WD463DXDJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MapColbyTrails/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Colby Trails Beta";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to show your position on the map and provide directions.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -363,12 +381,16 @@
 				DEVELOPMENT_TEAM = 3WD463DXDJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MapColbyTrails/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Colby Trails Beta";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to show your position on the map and provide directions.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

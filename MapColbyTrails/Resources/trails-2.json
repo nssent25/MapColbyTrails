@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Blue Trail",
+        "length": 0.3,
+        "description": "A scenic trail through the woods.",
+        "suitability": "Walking, Biking"
+    },
+    {
+        "name": "Green Trail",
+        "length": 0.9,
+        "description": "A scenic trail through the woods.",
+        "suitability": "Walking, Biking"
+    },
+    {
+        "name": "Purple Trail",
+        "length": 0.2,
+        "description": "A scenic trail through the woods.",
+        "suitability": "Walking, Biking"
+    },
+    {
+        "name": "Red Trail",
+        "length": 0.4,
+        "description": "A scenic trail through the woods.",
+        "suitability": "Walking, Biking"
+    },
+    {
+        "name": "Runnals Trails",
+        "length": 3.4,
+        "description": "A scenic trail through the woods.",
+        "suitability": "Walking, Biking"
+    },
+    {
+        "name": "White Trail",
+        "length": 0.3,
+        "description": "A scenic trail through the woods.",
+        "suitability": "Walking, Biking"
+    },
+    {
+        "name": "Yellow Trail",
+        "length": 0.8,
+        "description": "A scenic trail through the woods.",
+        "suitability": "Walking, Biking"
+    },
+    {
+        "name": "PPD Trails",
+        "length": 0.9,
+        "description": "A scenic trail through the woods.",
+        "suitability": "Walking, Biking"
+    }
+]
