@@ -16,7 +16,7 @@
 		CF175DBC2C22857800FEE0E9 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF175DBB2C22857800FEE0E9 /* UserLocation.swift */; };
 		CF175DBE2C2285A000FEE0E9 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF175DBD2C2285A000FEE0E9 /* MapViewModel.swift */; };
 		CF175DC02C22883800FEE0E9 /* MapView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF175DBF2C22883800FEE0E9 /* MapView2.swift */; };
-		CF175DC42C22937200FEE0E9 /* map-2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = CF175DC32C22937100FEE0E9 /* map-2.geojson */; };
+		CF175DCB2C23496900FEE0E9 /* map-2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = CF175DCA2C23496900FEE0E9 /* map-2.geojson */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,8 @@
 		CF175DBB2C22857800FEE0E9 /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
 		CF175DBD2C2285A000FEE0E9 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		CF175DBF2C22883800FEE0E9 /* MapView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView2.swift; sourceTree = "<group>"; };
-		CF175DC32C22937100FEE0E9 /* map-2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "map-2.geojson"; path = "../../../Downloads/map-2.geojson"; sourceTree = "<group>"; };
+		CF175DC92C23476800FEE0E9 /* trails.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = trails.geojson; sourceTree = "<group>"; };
+		CF175DCA2C23496900FEE0E9 /* map-2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "map-2.geojson"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,13 +65,10 @@
 			isa = PBXGroup;
 			children = (
 				CF175DA92C2277F000FEE0E9 /* MapColbyTrailsApp.swift */,
-				CF175DAB2C2277F000FEE0E9 /* ContentView.swift */,
-				CF175DB72C22782B00FEE0E9 /* MapView.swift */,
-				CF175DC32C22937100FEE0E9 /* map-2.geojson */,
-				CF175DBF2C22883800FEE0E9 /* MapView2.swift */,
-				CF175DB92C2278C400FEE0E9 /* Trail.swift */,
-				CF175DBB2C22857800FEE0E9 /* UserLocation.swift */,
-				CF175DBD2C2285A000FEE0E9 /* MapViewModel.swift */,
+				CF175DC62C23474D00FEE0E9 /* Models */,
+				CF175DC52C23473000FEE0E9 /* Views */,
+				CF175DC72C23475700FEE0E9 /* ViewModels */,
+				CF175DC82C23476800FEE0E9 /* Resources */,
 				CF175DAD2C2277F200FEE0E9 /* Assets.xcassets */,
 				CF175DAF2C2277F200FEE0E9 /* Preview Content */,
 			);
@@ -83,6 +81,42 @@
 				CF175DB02C2277F200FEE0E9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CF175DC52C23473000FEE0E9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CF175DAB2C2277F000FEE0E9 /* ContentView.swift */,
+				CF175DB72C22782B00FEE0E9 /* MapView.swift */,
+				CF175DBF2C22883800FEE0E9 /* MapView2.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CF175DC62C23474D00FEE0E9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CF175DB92C2278C400FEE0E9 /* Trail.swift */,
+				CF175DBB2C22857800FEE0E9 /* UserLocation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CF175DC72C23475700FEE0E9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CF175DBD2C2285A000FEE0E9 /* MapViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CF175DC82C23476800FEE0E9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CF175DCA2C23496900FEE0E9 /* map-2.geojson */,
+				CF175DC92C23476800FEE0E9 /* trails.geojson */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,7 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF175DB12C2277F200FEE0E9 /* Preview Assets.xcassets in Resources */,
-				CF175DC42C22937200FEE0E9 /* map-2.geojson in Resources */,
+				CF175DCB2C23496900FEE0E9 /* map-2.geojson in Resources */,
 				CF175DAE2C2277F200FEE0E9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
