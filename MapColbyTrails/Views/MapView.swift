@@ -14,6 +14,9 @@ struct MapView: View {
     @State private var showMenu: Bool = true
     @State var showTrailCards: Bool = false
     @State private var cameraPosition: MapCameraPosition = .colbyCollegeCam
+    @State private var mapType: MapStyle = .standard
+    @State private var satelliteMap: Bool = false
+    @State private var timer: Timer?
 
     var body: some View {
         ZStack {
@@ -25,53 +28,99 @@ struct MapView: View {
                 }
                 UserAnnotation()
             }
+//            .gesture(TapGesture().onEnded {
+//                withAnimation {
+//                    showMenu.toggle()
+//                }
+//                resetInactivityTimer()
+//            })
+            .mapStyle(mapType)
             .mapControls {
+                MapPitchToggle()
+                MapScaleView()
+                MapCompass()
+                    .mapControlVisibility(.visible)
                 MapUserLocationButton()
                     .onTapGesture {
                         if let location = viewModel.userLocation.currentLocation {
                             cameraPosition = .region(MKCoordinateRegion(center: location, span: MKCoordinateSpan(latitudeDelta: 0.015, longitudeDelta: 0.020)))
                         }
                     }
-                MapPitchToggle()
-                Button("Center"){
-                    cameraPosition = .colbyCollegeCam
-                }
-                MapScaleView()
-                MapCompass()
-                    .mapControlVisibility(.visible)
             }
-//            .onTapGesture {
-//                showMenu.toggle()
-//            }
-            
-            if showMenu {
-                VStack {
-                    Spacer()
-                    HStack {
-                        Spacer()
-                        VStack {
-                            Button("Show All Trails") {
-                                showTrailCards = true
-                            }
+
+            VStack {
+                Spacer()
+                HStack {
+                    Button(action: {
+                        cameraPosition = .colbyCollegeCam
+//                        resetInactivityTimer()
+                    }) {
+                        Image(systemName: "house")
+                            .padding(12)
+                            .background(.thickMaterial)
+                            .foregroundColor(.accentColor)
+                            .cornerRadius(8)
+                            .shadow(radius: 28)
+                    }
+
+                    Button(action: {
+                        showTrailCards = true
+//                        resetInactivityTimer()
+                    }) {
+                        Label("Show Trails", systemImage: "figure.walk")
                             .padding()
                             .background(Color.accentColor)
                             .foregroundColor(.white)
-                            .cornerRadius(15)
-                            .padding()
-                        }
-                        Spacer()
+                            .cornerRadius(16)
+                            .shadow(radius: 28)
+                    }
+                    .padding()
+
+                    Button(action: {
+                        satelliteMap.toggle()
+                        mapType = satelliteMap ? .imagery : .standard
+//                        resetInactivityTimer()
+                    }) {
+                        Image(systemName: "map")
+                            .padding(12)
+                            .background(.thickMaterial)
+                            .foregroundColor(.accentColor)
+                            .cornerRadius(8)
+                            .shadow(radius: 28)
                     }
                 }
-                .sheet(isPresented: $showTrailCards) {
-                    ZStack {
-//                        Color.black.edgesIgnoringSafeArea(.all)
-                        TrailInfosView(viewModel: viewModel, showTrailCards: $showTrailCards)
-                            .presentationDetents([.medium])
-                            .presentationDragIndicator(.visible)
-                    }
+                .offset(y: showMenu ? 10 : UIScreen.main.bounds.height)
+                .opacity(showMenu ? 1 : 0)
+                .animation(.easeInOut(duration: 0.5), value: showMenu)
+            }
+            .sheet(isPresented: $showTrailCards) {
+                ZStack {
+                    TrailInfosView(viewModel: viewModel, showTrailCards: $showTrailCards)
+                        .presentationDetents([.medium])
+                        .presentationDragIndicator(.visible)
                 }
             }
-                
+            .onAppear {
+//                startInactivityTimer()
+            }
+            .onDisappear() {
+//                startInactivityTimer()
+            }
+        }
+    }
+
+    // Function to reset the inactivity timer
+    private func resetInactivityTimer() {
+        timer?.invalidate()
+        startInactivityTimer()
+    }
+
+    // Function to start the inactivity timer
+    private func startInactivityTimer() {
+        timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
+            withAnimation {
+                showMenu = false
+            }
         }
     }
 }

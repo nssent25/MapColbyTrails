@@ -16,10 +16,10 @@
 		CF175DBC2C22857800FEE0E9 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF175DBB2C22857800FEE0E9 /* UserLocation.swift */; };
 		CF175DBE2C2285A000FEE0E9 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF175DBD2C2285A000FEE0E9 /* MapViewModel.swift */; };
 		CF175DC02C22883800FEE0E9 /* MapView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF175DBF2C22883800FEE0E9 /* MapView2.swift */; };
-		CF175DCB2C23496900FEE0E9 /* map-2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = CF175DCA2C23496900FEE0E9 /* map-2.geojson */; };
 		CF175DCE2C2377B100FEE0E9 /* trails-2.json in Resources */ = {isa = PBXBuildFile; fileRef = CF175DCD2C2377B100FEE0E9 /* trails-2.json */; };
 		CF175DD02C237A4A00FEE0E9 /* TrailInfosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF175DCF2C237A4A00FEE0E9 /* TrailInfosView.swift */; };
 		CF175DD22C237B2200FEE0E9 /* TrailInfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF175DD12C237B2200FEE0E9 /* TrailInfoCardView.swift */; };
+		CF175DD62C23963D00FEE0E9 /* map-2.geojson in Resources */ = {isa = PBXBuildFile; fileRef = CF175DD52C23963D00FEE0E9 /* map-2.geojson */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,11 +34,11 @@
 		CF175DBD2C2285A000FEE0E9 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		CF175DBF2C22883800FEE0E9 /* MapView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView2.swift; sourceTree = "<group>"; };
 		CF175DC92C23476800FEE0E9 /* trails.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = trails.geojson; sourceTree = "<group>"; };
-		CF175DCA2C23496900FEE0E9 /* map-2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "map-2.geojson"; sourceTree = "<group>"; };
 		CF175DCC2C234B6600FEE0E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CF175DCD2C2377B100FEE0E9 /* trails-2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "trails-2.json"; sourceTree = "<group>"; };
 		CF175DCF2C237A4A00FEE0E9 /* TrailInfosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailInfosView.swift; sourceTree = "<group>"; };
 		CF175DD12C237B2200FEE0E9 /* TrailInfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailInfoCardView.swift; sourceTree = "<group>"; };
+		CF175DD52C23963D00FEE0E9 /* map-2.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "map-2.geojson"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +123,7 @@
 		CF175DC82C23476800FEE0E9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CF175DCA2C23496900FEE0E9 /* map-2.geojson */,
+				CF175DD52C23963D00FEE0E9 /* map-2.geojson */,
 				CF175DC92C23476800FEE0E9 /* trails.geojson */,
 				CF175DCD2C2377B100FEE0E9 /* trails-2.json */,
 			);
@@ -189,7 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF175DB12C2277F200FEE0E9 /* Preview Assets.xcassets in Resources */,
-				CF175DCB2C23496900FEE0E9 /* map-2.geojson in Resources */,
+				CF175DD62C23963D00FEE0E9 /* map-2.geojson in Resources */,
 				CF175DCE2C2377B100FEE0E9 /* trails-2.json in Resources */,
 				CF175DAE2C2277F200FEE0E9 /* Assets.xcassets in Resources */,
 			);

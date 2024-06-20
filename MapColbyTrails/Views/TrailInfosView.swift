@@ -20,11 +20,11 @@ struct TrailInfosView: View {
                         .padding()  // Optional: Add padding for better aesthetics
                 }
             }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-            .frame(height: 300)
-            .background(.regularMaterial)  // Use thin material for the background
-            .cornerRadius(15)  // Optional: Add corner radius for rounded corners
-            .padding()
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
+            .frame(height: 200)
+            .background(.clear)  // Use thin material for the background
+            .cornerRadius(16)  // Optional: Add corner radius for rounded corners
+//            .padding()
         }
         .background(.thinMaterial)
     }
