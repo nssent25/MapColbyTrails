@@ -55,8 +55,9 @@ struct MapView: View {
                         cameraPosition = .colbyCollegeCam
 //                        resetInactivityTimer()
                     }) {
-                        Image(systemName: "house")
-                            .padding(12)
+                        Image(systemName: "mappin.and.ellipse")
+                            .padding(11)
+                            .padding(.horizontal,2)
                             .background(.thickMaterial)
                             .foregroundColor(.accentColor)
                             .cornerRadius(8)

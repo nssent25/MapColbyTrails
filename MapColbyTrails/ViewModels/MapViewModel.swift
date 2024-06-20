@@ -23,7 +23,7 @@ class MapViewModel: ObservableObject {
     
     // Load the trails from a GeoJSON file
     func loadTrails() {
-        guard let url = Bundle.main.url(forResource: "map-2", withExtension: "geojson") else { return }
+        guard let url = Bundle.main.url(forResource: "map-3", withExtension: "geojson") else { return }
         do {
             let data = try Data(contentsOf: url)
             let geoJSON = try MKGeoJSONDecoder().decode(data)
