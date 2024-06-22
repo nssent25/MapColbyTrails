@@ -95,11 +95,12 @@ struct MapView: View {
                 .animation(.easeInOut(duration: 0.5), value: showMenu)
             }
             .sheet(isPresented: $showTrailCards) {
-                ZStack {
-                    TrailInfosView(viewModel: viewModel, showTrailCards: $showTrailCards)
-                        .presentationDetents([.medium])
-                        .presentationDragIndicator(.visible)
-                }
+                TrailInfosView(viewModel: viewModel)
+                    .presentationDetents([.medium,.large])
+                    .presentationDragIndicator(.visible)
+                    .presentationBackground(.ultraThinMaterial)
+                    .ignoresSafeArea()
+                
             }
             .onAppear {
 //                startInactivityTimer()

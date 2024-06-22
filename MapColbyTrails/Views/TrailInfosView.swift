@@ -9,38 +9,33 @@ import SwiftUI
 
 struct TrailInfosView: View {
     @ObservedObject var viewModel: MapViewModel
-    @Binding var showTrailCards: Bool
     
     var body: some View {
         VStack {
-            Spacer()
-            TabView {
+            HStack {
+                Text("All Trails")
+                    .font(.title)
+                    .bold()
+                .padding()
+                Spacer()
+            }
+            .padding()
+            
+            ScrollView {
                 ForEach(viewModel.trailInfos) { trailInfo in
-                    TrailInfoCardView(trailInfo: trailInfo)
-                        .padding()  // Optional: Add padding for better aesthetics
+                    TrailInfoCardView(trailInfo: trailInfo, viewModel: viewModel)
+                        .padding(.horizontal)
                 }
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
-            .frame(height: 200)
-            .background(.clear)  // Use thin material for the background
-            .cornerRadius(16)  // Optional: Add corner radius for rounded corners
+//            .frame(height: 200)
+            .background(.clear)
+            .cornerRadius(16)
 //            .padding()
         }
-        .background(.thinMaterial)
     }
 }
 
 #Preview {
-    StateWrapper {
-        TrailInfosView(viewModel: MapViewModel(), showTrailCards: $0)
-    }
-}
-
-struct StateWrapper<Content: View>: View {
-    @State private var value = true
-    var content: (Binding<Bool>) -> Content
-
-    var body: some View {
-        content($value)
-    }
+        TrailInfosView(viewModel: MapViewModel())
 }

@@ -68,7 +68,7 @@ class MapViewModel: ObservableObject {
     }
     
     // Function to determine color based on trail name
-    private func colorForTrail(named name: String) -> Color {
+    func colorForTrail(named name: String) -> Color {
         switch name {
         case "Blue Trail":
             return .blue
@@ -88,6 +88,24 @@ class MapViewModel: ObservableObject {
             return .teal
         default:
             return .black // Default color if the trail name is not recognized
+        }
+    }
+    
+    func suitabilitySymbols(for suitability: String) -> [String] {
+        let suitabilityKeywords = suitability.split(separator: ",").map { $0.trimmingCharacters(in: .whitespaces) }
+        return suitabilityKeywords.compactMap { keyword in
+            switch keyword.lowercased() {
+            case "walking":
+                return "figure.walk"
+            case "biking":
+                return "bicycle"
+            case "running":
+                return "figure.run"
+            case "hiking":
+                return "figure.hike"
+            default:
+                return nil
+            }
         }
     }
     
